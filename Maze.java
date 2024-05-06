@@ -25,7 +25,7 @@ public class Maze
             { WALL,  WALL, EMPTY, EMPTY, EMPTY, EMPTY,  WALL,  WALL, EMPTY,  END},
             { WALL,  WALL,  WALL,  WALL,  WALL,  WALL,  WALL,  WALL,  WALL, WALL},
         };
-        GridViewer.view(grid);
+        Viewer.view(grid);
         String solution;
         Scanner sc = new Scanner(System.in);
         System.out.println("Find a solution to get from ^^ to $$, using the characters " 
@@ -103,6 +103,6 @@ public class Maze
         {
             System.out.println("MESSAGE 5"); // Did not reach the end.
         }
-        GridViewer.view(grid);
+        Viewer.view(grid);
     }
 }
