@@ -101,7 +101,7 @@ public class Maze
         
         if(!solved)
         {
-            System.out.println("MESSAGES 5"); // Did not reach the end.
+            System.out.println( "You have failed to escape. Future archeologists gaze upon your remains in bafflement."); // Did not reach the end.
         }
         Viewer.view(grid);
     }
