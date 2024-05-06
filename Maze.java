@@ -77,24 +77,23 @@ public class Maze
             }
             else
             {
-                switch(grid[currentRow][currentCol])
+                if(grid[currentRow][currentCol] == EMPTY)
                 {
-                    case Maze.EMPTY:
-                        grid[currentRow][currentCol] = Maze.VISITED;
-                        break;
-                    case Maze.WALL:
-                        done = true;
-                        System.out.println("You stumble blindly into a solid concrete wall.");
-                        break;
-                    case Maze.END:
-                        done = true;
-                        solved = true;
-                        System.out.println("SOLVED!");
-                        break;
-                    default:
-                        // Do nothing
+                    grid[currentRow][currentCol] = VISITED;
                 }
-
+                else if(grid[currentRow][currentCol] == WALL)
+                {
+                    done = true;
+                    System.out.println( "You stumble blindly into a solid concrete wall."); // Hit wall.
+                }
+                else if(grid[currentRow][currentCol] == END)
+                {
+                    done = true;
+                    solved = true;
+                    System.out.println( "SOLVED!"); // Solved.
+                }
+                else
+                {} // Do nothing
             }
             
             charIndex++;
